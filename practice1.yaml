@@ -13,7 +13,7 @@
 
   - name: ippudu id ni add chedam using when condition
     ansible.builtin.command: id sodhigadu
-     when: vinni.rc != 0  
+    when: vinni.rc != 0  
   
   - name: chudam ra piggy
     ansible.builtin.debug:
