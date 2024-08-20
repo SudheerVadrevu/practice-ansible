@@ -9,7 +9,11 @@
   
   - name: error message ni store chedam
     ansible.builtin.debug:
-     msg: "store error message {{ vinni }}"  
+     msg: "store error message {{ vinni }}"
+
+  - name: ippudu id ni add chedam using when condition
+    ansible.builtin.command: id sodhigadu
+     when: vinni.rc != 0  
   
   - name: chudam ra piggy
     ansible.builtin.debug:
