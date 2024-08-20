@@ -5,4 +5,4 @@
   tasks:
   - name: let see our god names
     ansible.builtin.debug:
-     msg: "this was the shiva for {{ shiva }} and vishnu for {{ vishnu }} other god lakshmi for {{ lakshmi }}"
+     msg: "this was the shiva for {{ siva }} and vishnu for {{ vishnu }} other god lakshmi for {{ lakshmi }}"
