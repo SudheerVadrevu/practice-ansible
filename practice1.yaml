@@ -4,6 +4,35 @@
   - name: "let's see the default value"
     ansible.builtin.debug:
      msg: "this is the value for {{ lanja | default ('sindhu') }}"
- 
+  
+- name: ichina word ni upper case loki ala covert chesthamo chudam
+  hosts: mylovelyhost
+  vars:
+    racha: "he is mr. he is the mister racha"
+  tasks:
+  - name: let's convert the sentence into upper case
+    ansible.builtin.debug:
+     msg: "converted now {{ racha | Upper }}"
+
+- name: now convert into the lower case
+  hosts: mylovelyhost
+  vars:
+    sindhu: "NEE NIPPLES NI LICK CHEYALIANI VUNDHI"
+  tasks:
+  - name: convert into lower cases
+    ansible.builtin.debug:
+     msg: " converting into {{ sindhu | lower }} "
+
+- name: identify the unique numbers
+  hosts: mylovelyhost
+  vars:
+   mynumbers: [1,20,34,54,65,65,20,54,34]
+  tasks:
+  - name: remove the duplicates
+    ansible.builtin.debug:
+     msg: "{{ mynumbers | unique }}"
+
+
+
  
 
