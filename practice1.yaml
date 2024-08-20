@@ -1,13 +1,11 @@
-- name: idhi first atta
+- name: variables gurinchi chudam
   hosts: mylovelyhost
+  vars:
+    sudheer: sexy
+    sindhu: sula
+    ramya: kaya
   tasks:
-  - name: idhi na first atta
+  - name: the variables are not good
     ansible.builtin.debug:
-     msg: "this is sex with alekhya"
-
-- name: idhi na second atta
-  hosts: mylovelyhost
-  tasks:
-  - name: idhi na second atta
-    ansible.builtin.debug:
-     msg: "this is sex with sindhura. nee puku ni nakalani vundhi"
+     msg: "chandhu has {{sudheer}} {{sindhu}} koja {{ramya}}"
+     
