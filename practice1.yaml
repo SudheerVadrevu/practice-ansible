@@ -10,6 +10,6 @@
     ansible.builtin.debug:
       msg: "the dictionary is {{sudheergadu}} "
 
-  - name: After converting into items
+  - name: After converting into list
     ansible.builtin.debug:
       msg: "coverting into dictionany {{ sudheergadu| dict2items}}"
