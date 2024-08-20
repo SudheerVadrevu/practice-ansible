@@ -10,4 +10,4 @@
   tasks:
   - name: enter the given info please
     ansible.builtin.debug:
-     msg: "the username is {{wastecandidate}} and the password is {{password}}"
+     msg: "the username is {{wastecandidate}} and the password is {{ worstcandidate }}"
