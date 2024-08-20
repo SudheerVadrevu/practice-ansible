@@ -1,8 +1,13 @@
 - name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
-  vars_files:
-  - shermilanja.yaml
+  vars_prompt:
+  - name: wastecandidate
+    prompt: please enter the username
+    private: no
+  - name: worstcandidate
+    prompt: please enter the password
+    private: true
   tasks:
-  - name: let see our god names
+  - name: enter the given info please
     ansible.builtin.debug:
-     msg: "this was the shiva for {{ siva }} and vishnu for {{ vishnu }} other god lakshmi for {{ lakshmi }}"
+     msg: "the username is {{wastecandidate}} and the password is {{password}}"
