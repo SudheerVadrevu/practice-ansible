@@ -3,5 +3,5 @@
   tasks:
   - name: ippudu chudam variables ala read avuthayo
     ansible.builtin.debug:
-     msg: "here we use the values {{ naveena }} {{ ramya }} {{ tanuja }}"
+     msg: "here we use the values {{ naveena }} {{ ramya }}"
     
