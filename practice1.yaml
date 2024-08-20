@@ -2,12 +2,12 @@
   hosts: mylovelyhost
   become: yes
   tasks:
-  - name: install the ngnix
+  - name: install the nginx
     ansible.builtin.dnf:
-     name: ngnix
+     name: nginx
      state: latest
   - name: run the nginx
     ansible.builtin.service:
-     name: ngnix
+     name: nginx
      state: started
      enabled: yes
