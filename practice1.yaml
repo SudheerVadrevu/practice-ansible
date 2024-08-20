@@ -2,6 +2,6 @@
   hosts: mylovelyhost
   tasks:
   - name: ippudu chudam variables ala read avuthayo
-    ansible.builtin.dbg:
+    ansible.builtin.debug:
      msg: "here we use the values {{ sindhu }} {{ ramya }} {{ tanuja }}"
     
