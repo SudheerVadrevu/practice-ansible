@@ -1,38 +1,9 @@
-- name: ippudu filters ni chudam
-  hosts: mylovelyhost
-  tasks:
-  - name: "let's see the default value"
-    ansible.builtin.debug:
-     msg: "this is the value for {{ lanja | default ('sindhu') }}"
-  
-- name: ichina word ni upper case loki ala covert chesthamo chudam
+- name: ippudu min and max values chudam
   hosts: mylovelyhost
   vars:
-    racha: "he is mr. he is the mister racha"
+   sudheerages: [24,45,67,87,89,90,3,65,23,32,21,33,51,34,44,55,89,01,91,02]
   tasks:
-  - name: let's convert the sentence into upper case
+  - name: the minimum values will be
     ansible.builtin.debug:
-     msg: "converted now {{ racha | upper }}"
-
-- name: now convert into the lower case
-  hosts: mylovelyhost
-  vars:
-    sindhu: "NEE NIPPLES NI LICK CHEYALIANI VUNDHI"
-  tasks:
-  - name: convert into lower cases
-    ansible.builtin.debug:
-     msg: " converting into {{ sindhu | lower }} "
-
-- name: identify the unique numbers
-  hosts: mylovelyhost
-  vars:
-   mynumbers: [1,20,34,54,65,65,20,54,34]
-  tasks:
-  - name: remove the duplicates
-    ansible.builtin.debug:
-     msg: "{{ mynumbers | unique }}"
-
-
-
- 
+      msg: "min ages: {{ sudheerages| min }} , maxages: {{ sudheerages| max}}"
 
