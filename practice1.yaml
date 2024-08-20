@@ -1,9 +1,15 @@
 - name: ippudu min and max values chudam
   hosts: mylovelyhost
   vars:
-   sudheerages: [24,45,67,87,89,90,3,65,23,32,21,33,51,34,44,55,89,01,91,02]
+   sudheergadu:
+    dog: "animal"
+    sindhu: "lovelyfigure"
+    ramya: "No figure"
   tasks:
-  - name: the minimum values will be
+  - name: before convert to the items
     ansible.builtin.debug:
-      msg: "min ages: {{ sudheerages| min }} , maxages: {{ sudheerages| max}}"
+      msg: "the dictionary is {{sudheergadu}} "
 
+  - name: After converting into items
+    ansible.builtin.debug:
+      msg: "coverting into dictionany {{ sudheergadu| dict2items}}"
