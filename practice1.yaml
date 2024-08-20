@@ -1,7 +1,20 @@
 - name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
+  vars:
+   sudheer: "oka sodhigadu" #string
+   prasadam: #list
+   - laddu
+   - kaja
+   - gulabjam
+   brasizes: #mapping or dictionary
+    sindhubrasize: 11
+    ramyabrasizes: 45
+    shermibrasizes: 34
+   sizeiscorrect: true # boolean
   tasks:
-  - name: ippudu chudam variables ala read avuthayo
-    ansible.builtin.debug:
-     msg: "here we use the values {{ naveena }} {{ ramya }}"
+  - name: now it's time to use all the datatypes 
+    ansible.builtin.dbg:
+     msg: "oka sudheer {{ sudheer }} oka gift ichi {{ prasadam }} valla size telusukuni {{ brasizes }}
+              nijama kadha ani {{ sizeiscorrect}}"    
+
     
