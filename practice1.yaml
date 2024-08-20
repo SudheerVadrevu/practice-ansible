@@ -1,7 +1,7 @@
 - name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
   vars_files:
-  - vars.yaml
+  - pukugadu.yaml
   tasks:
   - name: let's see how we can vars variables
     ansible.builtin.debug:
