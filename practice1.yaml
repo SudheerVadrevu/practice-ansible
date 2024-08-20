@@ -1,9 +1,8 @@
 - name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
   vars_files:
-  - pukugadu.yaml
+  - shermilanja.yaml
   tasks:
-  - name: let's see how we can vars variables
-    ansible.builtin.debug:
-     msg: " here we see sudheer {{ sudheer }} and lick the {{ sidhu }} and {{ ramya }} and piskutha {{ shermi}} "
-  
+  - name: let see our god names
+    ansible.builtin debug:
+     msg: "this was the shiva for {{ shiva }} and vishnu for {{ vishnu }} other god lakshmi for {{ lakshmi }}"
