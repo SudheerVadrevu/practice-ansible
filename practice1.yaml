@@ -2,9 +2,11 @@
   hosts: mylovelyhost
   vars:
    sudheergadu:
-    dog: "animal"
-    sindhu: "lovelyfigure"
-    ramya: "No figure"
+   - {'key': 'dog', 'value': 'animal'}
+   - {'key': 'sindhu', 'value': 'lovelyfigure'}
+   - {'key': 'ramya', 'value': 'No figure'}
+ 
+    
   tasks:
   - name: before convert to the items
     ansible.builtin.debug:
@@ -12,4 +14,4 @@
 
   - name: After converting into list
     ansible.builtin.debug:
-      msg: "coverting into dictionany {{ sudheergadu| dict2items}}"
+      msg: "coverting into dictionany {{ sudheergadu| items2dict}}"
