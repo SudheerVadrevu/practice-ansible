@@ -1,11 +1,18 @@
-- name: variables gurinchi chudam
+- name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
   vars:
-    sudheer: sexy
-    sindhu: sula
-    ramya: kaya
+   sindhu: "doggie"
+   sidhu: "bookugadu"
+   shermi: "pukumunda"
   tasks:
-  - name: the variables are not good
+  - name: ikkada oka variable ni ala override chesthadho chudam
+    vars:
+     shermi: "sexypuku"
     ansible.builtin.debug:
-     msg: "chandhu has {{sudheer}} {{sindhu}} koja {{ramya}}"
+     msg: "sex ante {{sindhu}} and sidhugadu gurinchi chepali ante {{sidhu}} and shermila ki {{shermi}}"
+
+  - name: ippudu ikkada emi variables ivamu so override cheyadhu
+    ansible.builtin.debug:
+     msg: "sindhu ni {{sindhu}} ee style lo dengalani vudhi {{shermi}} kani kareem oka {{sidhu}}"
      
+  
