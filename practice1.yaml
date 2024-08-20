@@ -13,7 +13,7 @@
    sizeiscorrect: true # boolean
   tasks:
   - name: now it's time to use all the datatypes 
-    ansible.builtin.dbg:
+    ansible.builtin.debug:
      msg: "oka sudheer {{ sudheer }} oka gift ichi {{ prasadam }} valla size telusukuni {{ brasizes }}
               nijama kadha ani {{ sizeiscorrect}}"    
 
