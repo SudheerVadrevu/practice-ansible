@@ -3,7 +3,7 @@
   tasks:
   - name: "let's see the default value"
     ansible.builtin.debug:
-     msg: "this is the value for { lanja | default ('sindhu')}"
+     msg: "this is the value for {{ lanja | default ('sindhu') }}"
  
  
 
