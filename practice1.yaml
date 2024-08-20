@@ -1,18 +1,9 @@
 - name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
-  vars:
-   sindhu: "doggie"
-   sidhu: "bookugadu"
-   shermi: "pukumunda"
+  vars_files:
+  - vars.yaml
   tasks:
-  - name: ikkada oka variable ni ala override chesthadho chudam
-    vars:
-     shermi: "sexypuku"
+  - name: let's see how we can vars variables
     ansible.builtin.debug:
-     msg: "sex ante {{sindhu}} and sidhugadu gurinchi chepali ante {{sidhu}} and shermila ki {{shermi}}"
-
-  - name: ippudu ikkada emi variables ivamu so override cheyadhu
-    ansible.builtin.debug:
-     msg: "sindhu ni {{sindhu}} ee style lo dengalani vudhi {{shermi}} kani kareem oka {{sidhu}}"
-     
+     msg: " here we see sudheer {{ sudheer }} and lick the {{ sidhu }} and {{ ramya }} and piskutha {{ shermi}} "
   
