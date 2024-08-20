@@ -1,20 +1,18 @@
 - name: variables lo task level variables gurinchi chudam
   hosts: mylovelyhost
-  vars:
-   sudheer: "oka sodhigadu" #string
-   prasadam: #list
-   - laddu
-   - kaja
-   - gulabjam
-   brasizes: #mapping or dictionary
-    sindhubrasize: 11
-    ramyabrasizes: 45
-    shermibrasizes: 34
-   sizeiscorrect: true # boolean
+  become: yes
   tasks:
-  - name: now it's time to use all the datatypes 
+  - name: idam oka linux command
+    ansible.builtin.command: id sodhigadu
+    ignore_errors: true
+    register: vinni
+  
+  - name: error message ni store chedam
     ansible.builtin.debug:
-     msg: "oka sudheer {{ sudheer }} oka gift ichi {{ prasadam }} valla size telusukuni {{ brasizes }}
-              nijama kadha ani {{ sizeiscorrect}}"    
+     msg: "store error message {{ vinni }}"  
+  
+  - name: chudam ra piggy
+    ansible.builtin.debug:
+     msg: " adho oka sodhi"
 
-    
+
