@@ -1,22 +1,19 @@
-- name: variables lo task level variables gurinchi chudam
+- name: ippudu conditions ne chudam
   hosts: mylovelyhost
   become: yes
-  tasks:
-  - name: idam oka linux command
-    ansible.builtin.command: id sodhigadu
+  tasks: 
+  - name: linux command ala use cheyalo chudam
+    ansible.builtin.command: id sexysindhu
     ignore_errors: true
-    register: vinni
-  
-  - name: error message ni store chedam
+    register: sexy
+  - name: ippudu error message store chedam
     ansible.builtin.debug:
-     msg: "store error message {{ vinni }}"
-
-  - name: ippudu id ni add chedam using when condition
-    ansible.builtin.command: useradd sodhigadu
-    when: vinni.rc != 0  
-  
-  - name: chudam ra piggy
-    ansible.builtin.debug:
-     msg: " adho oka sodhi"
-
+     msg: "error message ni store chey jako {{ sexy }}"
+  - name: user sexysindhu ni add chedam
+    ansible.builtin.command: useradd sexysindhu
+    when: sexy.rc != 0 #condition ra
+  - name: normal message
+    ansible.builtin.command:
+     msg: " message normally"
+ 
 
