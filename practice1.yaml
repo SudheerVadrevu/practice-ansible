@@ -1,19 +1,19 @@
-- name: ippudu conditions ne chudam
+- name: ippudu filters ni chudam
   hosts: mylovelyhost
-  become: yes
-  tasks: 
-  - name: linux command ala use cheyalo chudam
-    ansible.builtin.command: id sexysindhu
-    ignore_errors: true
-    register: sexy
-  - name: ippudu error message store chedam
+  vars_prompt:
+    - name: sodhigadu
+      prompt: please enter the number
+      private: no
+  tasks:
+  - name: let's see how we can do it
     ansible.builtin.debug:
-     msg: "error message ni store chey jako {{ sexy }}"
-  - name: user sexysindhu ni add chedam
-    ansible.builtin.command: useradd sexysindhu
-    when: sexy.rc != 0 #condition ra
-  - name: normal message
+     msg: "the given number is {{ sodhigadu }}"
+    when: sodhigadu | int > 10
+
+  - name: what if we give less than 10
     ansible.builtin.debug:
-     msg: " message normally"
+     msg: "the given number is {{ sodhigadu }}"
+    when: sodhigadu | int <= 10
+ 
  
 
