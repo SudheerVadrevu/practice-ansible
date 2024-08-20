@@ -12,7 +12,7 @@
   tasks:
   - name: let's convert the sentence into upper case
     ansible.builtin.debug:
-     msg: "converted now {{ racha | Upper }}"
+     msg: "converted now {{ racha | upper }}"
 
 - name: now convert into the lower case
   hosts: mylovelyhost
