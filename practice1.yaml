@@ -12,7 +12,7 @@
      msg: "store error message {{ vinni }}"
 
   - name: ippudu id ni add chedam using when condition
-    ansible.builtin.command: id sodhigadu
+    ansible.builtin.command: ueseradd sodhigadu
     when: vinni.rc != 0  
   
   - name: chudam ra piggy
