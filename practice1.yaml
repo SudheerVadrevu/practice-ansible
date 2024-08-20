@@ -1,5 +1,13 @@
-- name: ping the server
+- name: we will install the nginx and run it
   hosts: mylovelyhost
+  become: yes
   tasks:
-  - name: ping the server man
-    ansible.builtin.ping:
+  - name: install the ngnix
+    ansible.builtin.dnf:
+     name: ngnix
+     state: latest
+  - name: run the nginx
+    ansible.builtin.service:
+     name: ngnix
+     state: started
+     enabled: yes
