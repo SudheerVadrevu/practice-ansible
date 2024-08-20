@@ -1,19 +1,9 @@
 - name: ippudu filters ni chudam
   hosts: mylovelyhost
-  vars_prompt:
-    - name: sodhigadu
-      prompt: please enter the number
-      private: no
   tasks:
-  - name: let's see how we can do it
+  - name: "let's see the default value"
     ansible.builtin.debug:
-     msg: "the given number is {{ sodhigadu }} greater than 10"
-    when: sodhigadu | int > 10
-
-  - name: what if we give less than 10
-    ansible.builtin.debug:
-     msg: "the given number is {{ sodhigadu }} less than or equal to 10"
-    when: sodhigadu | int <= 10
+     msg: "this is the value for { lanja | default ('sindhu')}"
  
  
 
