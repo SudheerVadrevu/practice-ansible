@@ -1,13 +1,13 @@
-- name: we will install the nginx and run it
-  hosts: mylovelyhost
-  become: yes
+- name: idhi first atta
+  hosts: mylovelyhosts
   tasks:
-  - name: install the nginx
-    ansible.builtin.dnf:
-     name: nginx
-     state: latest
-  - name: run the nginx
-    ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes
+  - name: idhi na first atta
+    ansible.builtin.debug:
+     msg: "this is sex with alekhya"
+
+- name: idhi na second atta
+  hosts: mylovelyhosts
+  tasks:
+  - name: idhi na second atta
+    ansible.builtin.debug:
+     msg: "this is sex with sindhura. nee puku ni nakalani vundhi"
