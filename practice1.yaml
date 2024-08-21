@@ -1,17 +1,12 @@
 - name: ippudu min and max values chudam
   hosts: mylovelyhost
-  vars:
-   sudheergadu:
-   - {'key': 'dog', 'value': 'animal'}
-   - {'key': 'sindhu', 'value': 'lovelyfigure'}
-   - {'key': 'ramya', 'value': 'No figure'}
- 
-    
+  become: yes
   tasks:
-  - name: before convert to the items
-    ansible.builtin.debug:
-      msg: "the dictionary is {{sudheergadu}} "
-
-  - name: After converting into list
-    ansible.builtin.debug:
-      msg: "coverting into dictionany {{ sudheergadu| items2dict}}"
+  - name: let's the item
+    ansible.builtin.dnf:
+      name: "{{item}}"
+      state: latest
+    loop:
+    - mysql
+    - nginx
+    - nodejs
