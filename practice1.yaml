@@ -4,8 +4,9 @@
   tasks:
   - name: let's the item
     ansible.builtin.dnf:
-      name: "{{item}}"
+      name: "{{ item }}"
       state: latest
+      enabled: yes
     loop:
     - mysql
     - nginx
